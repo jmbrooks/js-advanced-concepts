@@ -25,4 +25,4 @@ var myObj = {
 
 console.log(myObj.update().reverse().read());
 // Here's the same task WITHOUT chaining\
-
+// NOT YET BUILT
