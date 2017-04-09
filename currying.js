@@ -22,3 +22,16 @@ function curry(func,args,space) {
     }
     return accumulator([],sa,n);
 }
+
+//Demonstrating usage...
+function add (a,b,c){
+      if (arguments.length < this.add.length) {
+        return curry(this.add,arguments,this);
+      }
+      return a+b+c;
+}
+
+alert(add()(1,2,4));      // 7
+alert(add(1)(2)(5));      // 8
+alert(add(1)()(2)()(6));  // 9
+alert(add(1,2,7,8));      // 10
